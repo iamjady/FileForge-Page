@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+    overflow: hidden;
+}
+
+:root {
+    --nav-bg: #FFFFFF;
+    --nav-text: #082050;
+    --nav-blue: #1478F2;
+    --nav-border: #E8F2FC;
+    --nav-active: #1478F2;
+    --font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    height: 72px;
+    padding: 0 60px;
+}
+
+.nav-bar .logo img {
+    cursor: pointer;
+    height: 90px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    float: center;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--nav-text);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 5px 0;
+    margin: 20px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: var(--nav-active);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--nav-blue);
+    transform: scale(0);
+    transition: all .3s ease;
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1);
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    margin-left: 50px;
+    padding: 15px 15px;
+    background-color: var(--nav-active);
+    border-radius: 15px;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+
+.download-btn:hover {
+    background-color: #1478f2d0;
+}
+
+.download-btn img {
+    height: 30px;
+
+}
+
+.download-btn a {
+    color: var(--nav-bg);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    padding: 50px 0;
+    text-decoration: none;
+}
+
